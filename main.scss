@@ -1,0 +1,134 @@
+@import 'variables';
+@import 'button';
+
+body{
+    margin:0;
+    padding:0;
+}
+%para1-shared{
+    .para-type-1{
+    padding-left:10px;
+    font-size: $fs-13;
+    color:$dark-grey;
+    }
+}
+
+%para2-shared{
+    .para-type-2{
+    color:$purple;
+    margin-bottom:50px;
+    font-size: $fs-14;
+    }
+    
+}
+
+%input-shared{
+    .input{
+    padding:10px;
+    border:1px solid $light-grey;
+    border-radius: 5px;
+    margin-right:10px;
+    }
+    input{
+        border:none;
+       
+    }
+
+}
+
+
+.wrapper-container{
+    width:60%;
+    margin: auto;
+    border:2px solid $light-grey;
+    border-radius: 5px;
+    margin-top:5px;
+    padding-left: 30px;
+
+    .flex-container{
+        display: $f;
+        margin-top: 40px;
+
+        .column-1{
+            width: 60%;
+            .head{
+                margin-bottom:40px;
+                margin-top: 0px;
+                p{
+                    font-size: $fs-24;
+                }
+            img{
+                width: 20%;
+               }
+            }
+            .input-container{
+                @extend %para1-shared;
+                @extend %para2-shared;
+                @extend %input-shared;
+
+                .userinput{
+                    margin-top:50px;
+                }
+                .flex-container{
+                    justify-content: space-between;
+                    margin-top:50px;
+                    margin-bottom:25px;
+                }
+                .item{
+                    margin-bottom: 30px;
+                }
+            }
+        }
+        .column-2{
+            width: 40%;
+            text-align: center;
+            padding-right: 50px;
+
+            .col-container{
+                width: 70%;
+                margin: auto;
+                margin-top: 100px;
+            
+
+            img{
+                height: 70%;
+                width: 70%;
+            }
+
+            p{
+                font-size: $fs-18;
+            }
+        }
+
+    }
+}
+}
+
+footer{
+    width:60%;
+    margin: auto;
+    font-size: $fs-12;
+    margin-top:10px;
+
+    .flex-container2{
+        display: $f;
+        justify-content: space-between;
+
+        .col-1{
+            display: $f;
+
+            i{
+                padding:12px;
+            }
+        }
+
+        ul{
+            list-style: none;
+            display: $f;
+
+            li{
+                padding-left:10px
+            }
+        }
+    }
+}
